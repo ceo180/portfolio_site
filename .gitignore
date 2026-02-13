@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build outputs (uncomment if you want to commit built CSS)
+# css/styles.css
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
