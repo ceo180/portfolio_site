@@ -10,10 +10,10 @@ interface LogEntry {
 }
 
 const INITIAL_LOGS: LogEntry[] = [
-  { type: "system", text: "[01] KERNEL: SentinelOS v2.6.4-sec initialized" },
-  { type: "system", text: "[02] OPERATOR: Emmanuel Oshike // Software Engineer & Cybersecurity Analyst" },
-  { type: "system", text: "[03] PERIMETER: Suricata IDS Active • 0 packet drops • Zero-Trust verified", highlight: true },
-  { type: "system", text: "[04] RUNTIME: Next.js 16 • TypeScript Strict • PostgreSQL • Elastic Stack" }
+  { type: "system", text: "INITIALIZING SENTINEL KERNEL v2.6.4..." },
+  { type: "system", text: "OPERATOR: EMMANUEL OSHIKE // SWE & CYBERSECURITY ANALYST" },
+  { type: "system", text: "PERIMETER: SURICATA IDS ACTIVE • ZERO-TRUST VERIFIED", highlight: true },
+  { type: "system", text: "SYSTEM STATUS: SECURE • TYPE 'help' TO EXPLORE" }
 ];
 
 export default function HeroTerminal() {
@@ -62,7 +62,7 @@ export default function HeroTerminal() {
     } else if (trimmed === "about" || trimmed === "cat about") {
       newLogs.push({
         type: "output",
-        text: "-> Scrolling to Engineering & Security Mindset...",
+        text: "-> Scrolling to Engineering Mindset...",
         highlight: true
       });
       const el = document.getElementById("about");
@@ -76,24 +76,24 @@ export default function HeroTerminal() {
     } else if (trimmed === "contact" || trimmed === "ping" || trimmed === "ping contact") {
       newLogs.push({
         type: "output",
-        text: "-> PING contact // Dispatching mailto:oshikeec@gmail.com",
+        text: "-> PING contact // Opening mailto:oshikeec@gmail.com",
         highlight: true
       });
       window.location.href = "mailto:oshikeec@gmail.com";
     } else if (trimmed === "skills" || trimmed === "sysinfo") {
       newLogs.push({
         type: "output",
-        text: "-> Stack: React 19, Next.js 16, TypeScript, Node.js, Suricata IDS, Zeek, Elastic, PostgreSQL"
+        text: "-> Stack: Next.js 16, TypeScript, Suricata IDS, Zeek, Elastic SIEM, PostgreSQL"
       });
     } else if (trimmed === "whoami") {
       newLogs.push({
         type: "output",
-        text: "-> Emmanuel Oshike — Full-Stack Software Engineer & Cybersecurity Analyst."
+        text: "-> Emmanuel Oshike — Software Engineer & Cybersecurity Analyst."
       });
     } else {
       newLogs.push({
         type: "output",
-        text: `-> command not found: ${cmd}. Type 'help' for available commands.`
+        text: `-> command not found: ${cmd}. Type 'help' for options.`
       });
     }
 
@@ -107,29 +107,29 @@ export default function HeroTerminal() {
   };
 
   const quickCommands = [
-    { label: "ls projects", cmd: "projects" },
-    { label: "cat about", cmd: "about" },
-    { label: "ping contact", cmd: "contact" },
-    { label: "sysinfo", cmd: "sysinfo" }
+    { label: "projects", cmd: "projects" },
+    { label: "about", cmd: "about" },
+    { label: "contact", cmd: "contact" },
+    { label: "skills", cmd: "skills" }
   ];
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className="w-full text-left font-mono"
+      transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+      className="w-full max-w-lg lg:max-w-xl text-left font-mono"
     >
-      <div className="rounded-xl border border-border bg-[#0a0a0a]/95 backdrop-blur-xl shadow-2xl shadow-black/80 overflow-hidden">
+      <div className="rounded-2xl border border-white/10 bg-[#0a0a0a]/95 backdrop-blur-xl shadow-2xl shadow-black/90 overflow-hidden">
         {/* Terminal Header */}
         <div className="flex items-center justify-between px-4 py-2.5 bg-white/[0.03] border-b border-white/10">
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-red-500/70" />
-            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/70" />
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/70" />
-            <span className="ml-2 text-xs text-white/40 tracking-wider">
-              bash ~ emmanuel@sentinel: telemetry
-            </span>
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+          </div>
+          <div className="text-[11px] text-white/50 tracking-wider font-mono">
+            GUEST@SENTINEL:~
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_6px_#34d399]" />
