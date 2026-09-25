@@ -66,9 +66,9 @@ graph TD
     challenges: "Handling streaming AI responses smoothly while maintaining a perfectly responsive, hyper-minimalist user interface.",
     solution: "We utilized the Vercel AI SDK alongside GROQ's LPU inference engine to deliver instant, fluid AI interactions within a custom React architecture.",
     gallery: [
-      { url: "/images/Site_1.png", caption: "High-Conversion Hero Landing Page & Dynamic Feature Callouts" },
-      { url: "/images/Site_2.png", caption: "AI Sales Consultation Engine with Token-Streaming Responses" },
-      { url: "/images/Site_3.png", caption: "Interactive Platform Tier Selection & Client Conversion Flow" }
+      { url: "/images/Site_1.png", caption: "Hero Landing Experience with Conversational AI Booking Assistant & Voice Navigation" },
+      { url: "/images/Site_2.png", caption: "The Transformation: Interactive Before & After Renovation Comparison Slider" },
+      { url: "/images/Site_3.png", caption: "Architectural Expertise: Spatial Architecture, Botany Curation & Service Tiers" }
     ],
     mermaid: `
 sequenceDiagram
