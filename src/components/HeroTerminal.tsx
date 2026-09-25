@@ -118,7 +118,7 @@ export default function HeroTerminal() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className="w-full max-w-5xl mx-auto mt-6 text-left font-mono"
+      className="w-full text-left font-mono"
     >
       <div className="rounded-xl border border-border bg-[#0a0a0a]/95 backdrop-blur-xl shadow-2xl shadow-black/80 overflow-hidden">
         {/* Terminal Header */}
