@@ -116,9 +116,9 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
 
 export default function Projects() {
   return (
-    <section id="work" className="relative w-full py-32 bg-background z-10 scroll-mt-20">
-      <span id="projects" className="absolute -top-32" aria-hidden="true" />
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="work" className="relative w-full py-16 sm:py-24 lg:py-32 bg-background z-10 scroll-mt-20">
+      <span id="projects" className="absolute -top-16 sm:-top-24 lg:-top-32" aria-hidden="true" />
+      <div className="max-w-6xl mx-auto px-5 sm:px-6">
         <div className="mb-16">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">Selected Works</h2>

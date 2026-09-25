@@ -14,8 +14,8 @@ export default function About() {
   const imageY = useTransform(scrollYProgress, [0, 1], [-40, 40]);
 
   return (
-    <section ref={containerRef} id="about" className="relative w-full min-h-screen flex items-center justify-center px-6 py-32 bg-background z-10 scroll-mt-20">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <section ref={containerRef} id="about" className="relative w-full min-h-0 lg:min-h-screen flex items-center justify-center px-5 sm:px-6 py-16 sm:py-24 lg:py-32 bg-background z-10 scroll-mt-20">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-10 lg:gap-16 items-center">
         {/* Left Column: Biography & Technical Specs */}
         <motion.div style={{ y }} className="md:col-span-7 space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-white/[0.02] text-xs font-mono text-muted tracking-widest uppercase">

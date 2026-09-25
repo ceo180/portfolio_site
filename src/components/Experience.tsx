@@ -40,8 +40,8 @@ export default function Experience() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={containerRef} id="experience" className="relative w-full py-32 bg-background z-10 scroll-mt-20">
-      <div className="max-w-5xl mx-auto px-6">
+    <section ref={containerRef} id="experience" className="relative w-full py-16 sm:py-24 lg:py-32 bg-background z-10 scroll-mt-20">
+      <div className="max-w-5xl mx-auto px-5 sm:px-6">
         <div className="mb-20">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">
