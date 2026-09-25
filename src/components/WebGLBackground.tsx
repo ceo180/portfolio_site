@@ -1,7 +1,7 @@
 "use client";
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
-import { useRef, useMemo } from 'react';
+import { useRef, useMemo, useState, useEffect } from 'react';
 
 function Starfield(props: any) {
   const ref = useRef<any>(null);
@@ -42,6 +42,12 @@ function Starfield(props: any) {
 }
 
 export default function WebGLBackground() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-[#050505]">
       {/* Subtle Monochrome Ambient Radial Glow */}
@@ -65,12 +71,14 @@ export default function WebGLBackground() {
         style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}
       />
       
-      {/* 3D Canvas */}
-      <div className="absolute inset-0 z-10">
-        <Canvas camera={{ position: [0, 0, 3] }}>
-          <Starfield />
-        </Canvas>
-      </div>
+      {/* 3D Canvas - Mount only on client after initial paint */}
+      {mounted && (
+        <div className="absolute inset-0 z-10">
+          <Canvas camera={{ position: [0, 0, 3] }} gl={{ powerPreference: 'low-power', antialias: false }}>
+            <Starfield />
+          </Canvas>
+        </div>
+      )}
     </div>
   );
 }

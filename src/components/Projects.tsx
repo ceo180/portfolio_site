@@ -7,28 +7,34 @@ const projects = [
     description: "Network Intrusion Visualization using Elastic Stack, Suricata, and Zeek.",
     tags: ["Elastic Stack", "Security", "Machine Learning"],
     image: "/images/NIDPS_1.png",
-    link: "/projects/nidps"
+    link: "/projects/nidps",
+    githubUrl: "https://github.com/ceo180"
   },
   {
     title: "GreenScapes AI",
     description: "Intelligent Sales Platform built with Next.js 14 and Vercel AI SDK.",
     tags: ["Next.js 14", "GROQ AI", "Tailwind CSS"],
     image: "/images/Site_1.png",
-    link: "/projects/greenscapes-ai"
+    link: "/projects/greenscapes-ai",
+    liveUrl: "https://greenscapes-landing.vercel.app",
+    githubUrl: "https://github.com/ceo180/greenscapes-landing"
   },
   {
     title: "ExpenseMind",
     description: "Financial Analytics Platform with React 18, Node.js, and PostgreSQL.",
     tags: ["React 18", "PostgreSQL", "Node.js"],
     image: "/images/Expense_1.png",
-    link: "/projects/expensemind"
+    link: "/projects/expensemind",
+    liveUrl: "https://expensemindtracker-production.up.railway.app",
+    githubUrl: "https://github.com/ceo180/ExpenseMind_Tracker"
   },
   {
     title: "Sentinel Radar",
     description: "Automated Threat Intelligence & Zero-Trust Policy Orchestration Engine.",
     tags: ["Python", "Suricata", "Zero-Trust", "FastAPI"],
     image: "/images/NIDPS_2.png",
-    link: "/projects/sentinel-radar"
+    link: "/projects/sentinel-radar",
+    githubUrl: "https://github.com/ceo180"
   }
 ];
 
@@ -82,9 +88,17 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
         </div>
         
         <div style={{ transform: "translateZ(50px)" }} className="relative z-10 p-6 sm:p-8 flex flex-col h-full justify-end">
-          <div className="flex items-center gap-2 mb-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-tighter text-white group-hover:text-emerald-300 transition-colors">{project.title}</h3>
+          <div className="flex items-center justify-between gap-2 mb-2">
+            <div className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              <h3 className="text-2xl sm:text-3xl font-bold uppercase tracking-tighter text-white group-hover:text-emerald-300 transition-colors">{project.title}</h3>
+            </div>
+            {project.liveUrl && (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-[9px] font-mono text-emerald-300 font-medium tracking-wider">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                LIVE
+              </span>
+            )}
           </div>
           <p className="text-muted text-xs sm:text-sm mb-5 line-clamp-2 max-w-sm leading-relaxed">{project.description}</p>
           <div className="flex flex-wrap gap-2">

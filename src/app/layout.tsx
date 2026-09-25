@@ -1,10 +1,17 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Cursor from "@/components/Cursor";
 import Navbar from "@/components/Navbar";
 import TerminalPalette from "@/components/TerminalPalette";
+
+export const viewport: Viewport = {
+  themeColor: "#050505",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -74,6 +81,24 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Emmanuel Oshike",
+  url: "https://emmanueloshike.com",
+  jobTitle: "Software Engineer & Cybersecurity Specialist",
+  worksFor: {
+    "@type": "Organization",
+    name: "Emmanuel Tech Group",
+  },
+  sameAs: [
+    "https://github.com/ceo180",
+    "https://www.linkedin.com/in/emmanuel-oshike",
+  ],
+  description:
+    "Software Engineer and Cybersecurity Specialist architecting resilient full-stack systems and high-throughput network security telemetry.",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -84,6 +109,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="bg-background text-foreground min-h-screen">
         <Cursor />
         <SmoothScroll>
