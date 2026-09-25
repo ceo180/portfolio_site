@@ -1,0 +1,20 @@
+{
+  "name": "emmanuel-oshike-portfolio",
+  "version": "1.0.0",
+  "description": "Emmanuel Oshike's Front-End Developer Portfolio",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --watch",
+    "dev": "tailwindcss -i ./src/input.css -o ./css/styles.css --watch"
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "tailwindcss"
+  ],
+  "author": "Emmanuel Oshike",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
