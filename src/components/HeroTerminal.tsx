@@ -11,7 +11,7 @@ interface LogEntry {
 
 const INITIAL_LOGS: LogEntry[] = [
   { type: "system", text: "[01] KERNEL: SentinelOS v2.6.4-sec initialized" },
-  { type: "system", text: "[02] OPERATOR: Emmanuel Oshike // Software Engineer & Cybersecurity Specialist" },
+  { type: "system", text: "[02] OPERATOR: Emmanuel Oshike // Software Engineer & Cybersecurity Analyst" },
   { type: "system", text: "[03] PERIMETER: Suricata IDS Active • 0 packet drops • Zero-Trust verified", highlight: true },
   { type: "system", text: "[04] RUNTIME: Next.js 16 • TypeScript Strict • PostgreSQL • Elastic Stack" }
 ];
@@ -88,7 +88,7 @@ export default function HeroTerminal() {
     } else if (trimmed === "whoami") {
       newLogs.push({
         type: "output",
-        text: "-> Emmanuel Oshike — Full-Stack Software Engineer & Cybersecurity Specialist."
+        text: "-> Emmanuel Oshike — Full-Stack Software Engineer & Cybersecurity Analyst."
       });
     } else {
       newLogs.push({

@@ -26,7 +26,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://emmanueloshike.com"),
   title: {
-    default: "Emmanuel Oshike | Software Engineer & Cybersecurity",
+    default: "Emmanuel Oshike | Software Engineer & Cybersecurity Analyst",
     template: "%s | Emmanuel Oshike",
   },
   description:
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   keywords: [
     "Emmanuel Oshike",
     "Software Engineer",
-    "Cybersecurity Specialist",
+    "Cybersecurity Analyst",
     "Full Stack Developer",
     "Security Analyst",
     "Next.js",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://emmanueloshike.com",
-    title: "Emmanuel Oshike | Software Engineer & Cybersecurity",
+    title: "Emmanuel Oshike | Software Engineer & Cybersecurity Analyst",
     description:
       "Bridging the gap between hyper-modern software architecture and uncompromising system security.",
     siteName: "Emmanuel Oshike Portfolio",
@@ -86,7 +86,7 @@ const jsonLd = {
   "@type": "Person",
   name: "Emmanuel Oshike",
   url: "https://emmanueloshike.com",
-  jobTitle: "Software Engineer & Cybersecurity Specialist",
+  jobTitle: "Software Engineer & Cybersecurity Analyst",
   worksFor: {
     "@type": "Organization",
     name: "Emmanuel Tech Group",
@@ -96,7 +96,7 @@ const jsonLd = {
     "https://www.linkedin.com/in/emmanuel-oshike",
   ],
   description:
-    "Software Engineer and Cybersecurity Specialist architecting resilient full-stack systems and high-throughput network security telemetry.",
+    "Software Engineer and Cybersecurity Analyst architecting resilient full-stack systems and high-throughput network security telemetry.",
 };
 
 export default function RootLayout({

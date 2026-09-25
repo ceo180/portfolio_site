@@ -49,7 +49,7 @@ export default function TerminalPalette() {
         newHistory.push({ type: "output", text: "Available commands: help, whoami, projects, contact, clear" });
         break;
       case "whoami":
-        newHistory.push({ type: "output", text: "Emmanuel Oshike — Software Engineer & Cybersecurity Specialist." });
+        newHistory.push({ type: "output", text: "Emmanuel Oshike — Software Engineer & Cybersecurity Analyst." });
         break;
       case "projects":
         newHistory.push({ type: "output", text: "Navigating to projects..." });

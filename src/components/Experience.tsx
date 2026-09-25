@@ -5,7 +5,7 @@ import DecryptionText from "./DecryptionText";
 
 const experiences = [
   {
-    role: "Cybersecurity Specialist",
+    role: "Cybersecurity Analyst",
     company: "Freelance / Security Consulting",
     year: "2023 - Present",
     scope: "Perimeter Defense & Threat Hunting",
