@@ -10,6 +10,8 @@
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-syne: var(--font-syne), var(--font-geist-sans), sans-serif;
+  --font-outfit: var(--font-outfit), var(--font-geist-sans), sans-serif;
 }
 
 :root {
