@@ -139,6 +139,61 @@ graph TD
   }
 };
 
+export async function generateStaticParams() {
+  return Object.keys(projectsData).map((slug) => ({
+    slug,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug as keyof typeof projectsData;
+  const project = projectsData[slug];
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+      description: "The requested project case study could not be found.",
+    };
+  }
+
+  return {
+    title: `${project.title} — Case Study`,
+    description: `${project.subtitle}. Case study by Emmanuel Oshike (${project.role}). ${project.overview}`,
+    keywords: [
+      project.title,
+      ...project.tech,
+      "Emmanuel Oshike",
+      "Software Engineer",
+      "Cybersecurity Analyst",
+      "Case Study",
+      "Architecture",
+    ],
+    openGraph: {
+      title: `${project.title} — Case Study | Emmanuel Oshike`,
+      description: project.subtitle,
+      images: [
+        {
+          url: project.image,
+          width: 1200,
+          height: 630,
+          alt: `${project.title} preview screenshot`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — Case Study | Emmanuel Oshike`,
+      description: project.subtitle,
+      images: [project.image],
+    },
+  };
+}
+
 export default async function ProjectCaseStudy({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const slug = resolvedParams.slug as keyof typeof projectsData;
