@@ -46,7 +46,7 @@ const siteUrl =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Emmanuel Oshike | Software Engineer & Cybersecurity Analyst",
+    default: "Emmanuel Oshike | Software & Cybersecurity Analyst",
     template: "%s | Emmanuel Oshike",
   },
   description:
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    title: "Emmanuel Oshike | Software Engineer & Cybersecurity Analyst",
+    title: "Emmanuel Oshike | Software & Cybersecurity Analyst",
     description:
       "Bridging the gap between hyper-modern software architecture and uncompromising system security.",
     siteName: "Emmanuel Oshike Portfolio",
@@ -86,13 +86,13 @@ export const metadata: Metadata = {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Emmanuel Oshike | Software Engineer & Cybersecurity Analyst",
+        alt: "Emmanuel Oshike | Software & Cybersecurity Analyst",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emmanuel Oshike | Software Engineer & Cybersecurity Analyst",
+    title: "Emmanuel Oshike | Software & Cybersecurity Analyst",
     description:
       "Bridging the gap between hyper-modern software architecture and uncompromising system security.",
     images: ["/images/og-image.png"],
